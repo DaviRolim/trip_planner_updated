@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "trip-planner-crew"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.10.0,<3.12"
+crewai = {extras = ["tools"], version = "^0.32.2"}
+pydantic = "^2.6.3"
+load-dotenv = "^0.1.0"
+crewai-tools = "^0.3.0"
+unstructured = '==0.10.25'
+pyowm = '3.3.0'
+tools = "^0.1.9"
+python-dotenv = "1.0.0"
+browserbase = "^0.3.0"
+
+[tool.pyright]
+useLibraryCodeForTypes = true
+exclude = [".cache"]
+
+[tool.ruff]
+select = ['E', 'W', 'F', 'I', 'B', 'C4', 'ARG', 'SIM']
+ignore = ['W291', 'W292', 'W293']
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
